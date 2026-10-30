@@ -2,6 +2,9 @@
 
 **Mould in your home? Your landlord is now on a legal clock.**
 
+**Live demo:** https://mouldproof-1.onrender.com  
+(Free hosting: if it has been idle, the first load takes about 50 seconds to wake up.)
+
 In 2020, two-year-old Awaab Ishak died from prolonged exposure to mould in his family's social-housing flat in Rochdale, after his family's complaints went unanswered. **Awaab's Law** (the Hazards in Social Housing (Prescribed Requirements) (England) Regulations 2025) came into force on 27 October 2025. Social landlords in England must now investigate damp and mould that puts tenants' health at significant risk **within 10 working days**, make it safe **within 5 working days** of the investigation, and send the tenant a written summary within 3 working days. Emergency hazards must be dealt with **within 24 hours**.
 
 Those deadlines only help if tenants know they exist and can show they were missed. Mouldproof turns a few photos and a description of what happened into a case:
