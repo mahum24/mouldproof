@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mouldproof</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<header class="top">
+  <div class="wrap top-inner">
+    <div class="brand"><span class="logo" aria-hidden="true">◐</span>Mouldproof</div>
+    <a class="law" href="https://www.gov.uk/government/publications/awaabs-law-guidance-for-social-landlords" target="_blank" rel="noopener">Awaab's Law, in force since 27 Oct 2025</a>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="hero">
+    <p class="eyebrow">For council and housing-association tenants in England</p>
+    <h1>Mould in your home? Your landlord is now on a legal clock.</h1>
+    <p class="lede">Awaab's Law gives social landlords fixed deadlines to investigate and fix damp and mould that puts your health at risk. Show Mouldproof your photos and tell it what happened. It works out where your landlord stands against those deadlines, checks the landlord's record, and writes the letters that get things moving.</p>
+  </section>
+
+  <section class="grid">
+    <form id="form" class="card">
+      <div class="label">1 · Photos of the damp or mould <small>(up to 4)</small></div>
+      <label class="drop" id="drop">
+        <input id="file" type="file" accept="image/*" multiple hidden>
+        <span>Drop photos here or <u>choose files</u></span>
+      </label>
+      <div id="thumbs" class="thumbs"></div>
+
+      <label class="label" for="story">2 · What's happening?</label>
+      <textarea id="story" rows="6" required placeholder="Who is your landlord? When did you first tell them? What have they done? Who lives with you, and is anyone's health affected?"></textarea>
+
+      <button type="button" id="example" class="linkish">Load an example case</button>
+      <button class="go" id="go" type="submit">Build my case</button>
+      <p class="fine">Photos and text are only used to answer this request and aren't stored.</p>
+    </form>
+
+    <aside class="card agent">
+      <h3>Agent at work</h3>
+      <ol id="steps" class="steps">
+        <li data-step="inspect"><span class="chip vision">Nemotron VL</span>Inspect the photos</li>
+        <li data-step="facts"><span class="chip nano">Nemotron Nano</span>Pull dates &amp; facts from your story</li>
+        <li data-step="assess"><span class="chip ultra">Nemotron Ultra</span>Judge the hazard level</li>
+        <li data-step="clock"><span class="chip code">Law engine</span>Compute your landlord's deadlines</li>
+        <li data-step="record"><span class="chip tavily">Tavily</span>Search the landlord's track record</li>
+        <li data-step="verify"><span class="chip super">Nemotron Super</span>Extract &amp; verify findings</li>
+        <li data-step="letters"><span class="chip super">Nemotron Super</span>Write your letters</li>
+      </ol>
+      <div id="routing" class="routing hidden"></div>
+    </aside>
+  </section>
+
+  <div id="error" class="error hidden"></div>
+
+  <section id="results" class="hidden">
+    <div id="verdict" class="card verdict">
+      <div class="badge-big" id="vBadge"></div>
+      <div>
+        <h2 id="vHead"></h2>
+        <p id="vScope"></p>
+      </div>
+    </div>
+
+    <div class="card clock" id="clockCard">
+      <div class="clock-head">
+        <h3>The legal clock</h3>
+        <span id="clockSince"></span>
+      </div>
+      <ol id="timeline" class="timeline"></ol>
+      <p class="fine left">Deadlines are calculated in working days (excluding weekends and England &amp; Wales bank holidays) from the date you first told your landlord, following the <a id="guidance" target="_blank" rel="noopener">government guidance</a>.</p>
+    </div>
+
+    <div class="grid two">
+      <div class="card">
+        <h3>What the photos show</h3>
+        <div id="photoFindings" class="pf"></div>
+      </div>
+      <div class="card">
+        <h3>Why we think so</h3>
+        <ul id="reasons" class="list"></ul>
+        <h4>Do this today</h4>
+        <ul id="safety" class="list muted"></ul>
+        <h4>Strengthen your case</h4>
+        <ul id="gaps" class="list muted"></ul>
+      </div>
+    </div>
+
+    <div class="card" id="recordCard">
+      <h3 id="recordTitle">Your landlord's record</h3>
+      <ul id="record" class="record"></ul>
+    </div>
+
+    <div class="card letters">
+      <div class="tabs" role="tablist">
+        <button type="button" class="tab on" data-tab="letter">Letter to your landlord</button>
+        <button type="button" class="tab" data-tab="complaint" id="complaintTab">Formal complaint</button>
+        <span class="spacer"></span>
+        <button type="button" id="copy" class="small">Copy</button>
+        <button type="button" id="download" class="small">Download</button>
+      </div>
+      <pre id="letterText"></pre>
+    </div>
+  </section>
+</main>
+
+<footer class="wrap foot">
+  Mouldproof is not legal advice. Deadlines follow MHCLG's <i>Awaab's Law: guidance for social landlords</i> (updated 27 October 2025) under the Hazards in Social Housing (Prescribed Requirements) (England) Regulations 2025. For advice, contact Shelter or Citizens Advice. Example photos: Wikimedia Commons (see README for credits).
+</footer>
+
+<script src="/static/app.js"></script>
+</body>
+</html>
